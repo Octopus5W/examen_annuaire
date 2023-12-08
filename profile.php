@@ -14,7 +14,7 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
 
 <?php if (isset($_GET['action']) && $_GET['action'] === "edit_contact") : ?>
     <span class="text-cyan-950 block py-4 font-semibold  text-center">Modifier le profil de <?php echo $contact['firstname']; ?></span>
-    <form class="flex flex-col gap-2 justify-between h-screen" action="?action=edit_contact&id=<?php echo $_GET['id'] ?>" method="post">
+    <form class="flex flex-col gap-3 justify-between h-screen" action="?action=edit_contact&id=<?php echo $_GET['id'] ?>" method="post">
         <div>
             <div class="flex flex-col">
                 <label for="firstname">Prénom</label>
@@ -65,14 +65,14 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
                     displayErrors($errors['country']);
                 } ?>
             </div>
-            <div class="flex justify-between gap-2">
-                <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" type="submit" value="Appliquer">
-                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="myprofile.php">Annuler</a>
+            <div class="flex justify-between gap-3">
+                <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" type="submit" value="Appliquer">
+                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="myprofile.php">Annuler</a>
             </div>
         </div>
     <?php else : ?>
         <span class="text-cyan-950 block py-4 font-semibold  text-center">Profil de <?php echo ($contact['firstname'] . " " . $contact['lastname']) ?></span>
-        <div class="flex flex-col gap-2 justify-between h-full">
+        <div class="flex flex-col gap-3 justify-between h-full">
             <div>
                 <div class="flex flex-col">
                     <span class="text-gray-400">Prénom:</span>
@@ -103,9 +103,9 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
                     <span><?php echo $contact['country']; ?></span>
                 </div>
             </div>
-            <div class="flex justify-between gap-2">
-                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="?action=edit_contact&id=<?php echo $_GET['id'] ?>">Modifier</a>
-                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="bookphone.php">Retour</a>
+            <div class="flex justify-between gap-3">
+                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="?action=edit_contact&id=<?php echo $_GET['id'] ?>">Modifier</a>
+                <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="bookphone.php">Retour</a>
             </div>
         </div>
     <?php endif; ?>

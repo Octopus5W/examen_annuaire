@@ -8,7 +8,7 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
 
 <?php if (isset($_GET['action']) && $_GET['action'] === "edit_user") : ?>
     <span class="text-cyan-950 block py-4 font-semibold   text-center">Modifier mon profil</span>
-    <form class="flex flex-col gap-2 justify-between h-screen" action="myprofile.php?action=edit_user&send=true" method="post">
+    <form class="flex flex-col gap-3 justify-between h-screen" action="myprofile.php?action=edit_user&send=true" method="post">
         <div>
             <div class="flex flex-col">
                 <label class="text-gray-400" for="firstname">Prénom</label>
@@ -32,15 +32,15 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
                 } ?>
             </div>
         </div>
-        <div class="flex justify-between gap-2">
-            <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5 " type="submit" value="Appliquer">
-            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="myprofile.php">Annuler</a>
+        <div class="flex justify-between gap-3">
+            <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3 " type="submit" value="Appliquer">
+            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="myprofile.php">Annuler</a>
         </div>
 
     </form>
 <?php else : ?>
     <span class="text-cyan-950 block py-4 font-semibold  text-center">Mon Profil</span>
-    <div class="flex flex-col gap-2 justify-between h-screen">
+    <div class="flex flex-col gap-3 justify-between h-screen">
         <div>
             <div class="flex flex-col">
                 <span class="text-gray-400">Prénom:</span>
@@ -55,9 +55,9 @@ if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
                 <span><?php echo $_SESSION['login']['username']; ?></span>
             </div>
         </div>
-        <div class="flex justify-between gap-2">
-            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="?action=edit_user">Modifier</a>
-            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="bookphone.php">Retour</a>
+        <div class="flex justify-between gap-3">
+            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="?action=edit_user">Modifier</a>
+            <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="bookphone.php">Retour</a>
         </div>
     </div>
 <?php endif; ?>

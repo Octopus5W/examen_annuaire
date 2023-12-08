@@ -4,7 +4,7 @@ require_once('layouts/header.php');
 ?>
 
 <span class="text-cyan-950 block py-4 font-semibold  text-center">Ajouter un contact</span>
-<form class="block flex flex-col gap-2 justify-between h-screen" action="?action=add_contact" method="post">
+<form class="block flex flex-col gap-3 justify-between h-screen" action="?action=add_contact" method="post">
     <div>
         <div class="flex flex-col">
             <label class="px-2" class=" px-2" for="firstname">Prénom</label>
@@ -35,9 +35,9 @@ require_once('layouts/header.php');
             <input class="rounded-lg h-12 px-2" type="text" name="country" id="country" placeholder="Pays" required>
         </div>
     </div>
-    <div class="flex justify-between gap-2">
-        <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 py-5" type="submit" value="Confirmer">
-        <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-16 w-1/2 text-center py-5" href="bookphone.php">Retour</a>
+    <div class="flex justify-between gap-3">
+        <input class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 py-3" type="submit" value="Confirmer">
+        <a class="block bg-gray-300 hover:bg-gray-200 rounded-lg h-12 w-1/2 text-center py-3" href="bookphone.php">Retour</a>
     </div>
 </form>
 <?php require_once('layouts/footer.php'); ?>

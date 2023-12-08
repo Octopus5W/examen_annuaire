@@ -1,4 +1,5 @@
 <?php
+// ajouter un contact
 if(isset($_GET['action']) && $_GET['action'] === 'add_contact' && isset($_POST) && !empty($_POST)){
     
     // on vérifie que les champs obligatoires sont remplis avec les conditions requises

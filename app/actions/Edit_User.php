@@ -1,5 +1,7 @@
 <?php
 if (isset($_GET['action']) && $_GET['action'] === "edit_user" && isset($_GET['send']) && $_GET['send'] === "true" && isset($_POST) && !empty($_POST)) {
+    
+    // on vérifie que les champs obligatoires sont remplis
     $errors = formRequired($_POST, [
         'firstname' => ['required', 'max:50'],
         'lastname' => ['required', 'max:50'],
